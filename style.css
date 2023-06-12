@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark-mostyl-black-blue: hsl(234, 17%, 12%);
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 14px;
+    background-image: url('/images/bg-stars.svg');
+    background-repeat: no-repeat;
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+section h1 {
+    color: var(--White);
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+section .counter-group {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+section .counter-group .counter .count-div:first-child {
+    background-color: #2c2c44;
+    margin-bottom: 0.1px;
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+}
+
+section .counter-group .counter .count-div {
+    width: 4.8rem;
+    height: 3rem;
+    background-color: #2c2c44;
+    border-radius: 0.5rem;
+}
+
+section .counter-group .counter .count-div:nth-child(2)
+{
+    background-color: #343650;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+}
+
+section .counter-group .counter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section .counter-group .counter .time {
+    color: var(--Soft-red);
+    font-size: 2.5rem;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section .counter-group .counter span.t {
+    margin-top: 1rem;
+    color: var(--Grayish-blue);
+    font-size: .5rem;
+    letter-spacing: 0.2rem;
+}
+
+footer {
+    background-image: url('/images/pattern-hills.svg');
+    background-repeat: no-repeat;
+    background-color: var(--Very-dark-mostyl-black-blue);
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5rem;
+}
+
+footer img {
+    width: 2rem;
+}
+
+@media all and (min-width: 500px)
+{
+    section h1 {
+        font-size: 1.8rem;
+    }
+
+    section .counter-group .counter .count-div {
+        width: 6rem;
+        height: 3rem;
+    }
+
+    section .counter-group .counter .time {
+        font-size: 3rem;
+    }
+
+    section .counter-group .counter span.t {
+        font-size: .8rem;
+    }
+
+}
+
+@media all and (min-width: 800px)
+{
+    section h1 {
+        font-size: 2.5rem;
+    }
+
+    section .counter-group {
+        gap: 4rem;
+    }
+
+    section .counter-group .counter .count-div {
+        width: 8rem;
+        height: 4rem;
+    }
+
+    section .counter-group .counter .time {
+        font-size: 4rem;
+    }
+
+    section .counter-group .counter span.t {
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width: 400px)
+{
+    section h1 {
+        font-size: 1.5rem;
+    }
+
+    section .counter-group {
+        margin-top: 4rem;
+    }
+
+    section .counter-group .counter .count-div {
+        width: 3rem;
+        height: 2rem;
+    }
+
+    section .counter-group .counter .time {
+        font-size: 1.4rem;
+    }
+
+    section .counter-group .counter span.t {
+        font-size: .4rem;
+    }
+
+    footer {
+        gap: 1rem;
+        padding: 3rem;
+    }
+
+    footer img {
+        width: 1.2rem;
+    }
+}
